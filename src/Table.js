@@ -35,7 +35,7 @@ export default class Table extends React.Component {
   render() {
     return (
       <ReactTable
-        data={this.state.data}
+        data= {this.state.data}
         columns={this.getFields().map(field => {
           return {
             Header: field.name,
