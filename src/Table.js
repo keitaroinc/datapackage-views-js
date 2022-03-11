@@ -41,7 +41,7 @@ export default class Table extends React.Component {
             Header: field.name,
             accessor: field.name,
             Cell: props => <div className={field.type || ''}>
-              <span>{props.value}</span>
+              {(typeof props.value === "string" && props.value.includes("http" || "https")) ? <a href={props.value} style={{textDecoration: "underline"}}>{props.value}</a> : <span>{props.value}</span>}
             </div>
           }
         })}
